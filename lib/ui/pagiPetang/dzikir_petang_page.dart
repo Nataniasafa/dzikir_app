@@ -1,9 +1,9 @@
-import 'package:adzk_dikr_app/model/dzikir_setelah_sholat.dart';
+import 'package:adzk_dikr_app/model/dzikir_petang.dart';
 import 'package:flutter/material.dart';
 import '../../theme.dart';
 
-class DzikirSetelahSholat extends StatelessWidget {
-  const DzikirSetelahSholat({Key? key}) : super(key: key);
+class DzikirPetangPage extends StatelessWidget {
+  const DzikirPetangPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class DzikirSetelahSholat extends StatelessWidget {
                           Icons.arrow_back
                       )),
                   Expanded(child: Text(
-                    'Dzikir Setelah sholat', style: purplePoppins.copyWith(
+                    'Dzikir Petang', style: purplePoppins.copyWith(
                       fontSize: 18
                   ),
                   ))
@@ -34,7 +34,7 @@ class DzikirSetelahSholat extends StatelessWidget {
               Expanded(
                   child: PageView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: listDzikirAfterPray.length,
+                      itemCount: dataDzikirPetang.length,
                       itemBuilder: (context,index){
                         return Container(
                           margin: EdgeInsets.all(edge),
@@ -48,14 +48,14 @@ class DzikirSetelahSholat extends StatelessWidget {
                             child: Column(
                               children: [
                                 Text(
-                                  listDzikirAfterPray [index].title,
+                                  dataDzikirPetang[index].title2,
                                   style: orangePoppins.copyWith(
                                       fontSize: 20
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
                                 SizedBox(height: 10,),
-                                Text(listDzikirAfterPray [index].arabic,
+                                Text(dataDzikirPetang[index].arab2,
                                   style: orangePoppins.copyWith(
                                       fontSize: 20
                                   ),
@@ -66,14 +66,7 @@ class DzikirSetelahSholat extends StatelessWidget {
                                   height: 10,
                                 ),
                                 Text(
-                                  listDzikirAfterPray [index].translate,
-                                  style: orangePoppins.copyWith(
-                                      fontSize: 14
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                                Text(
-                                  listDzikirAfterPray [index].arabLatin,
+                                  dataDzikirPetang[index].arti2,
                                   style: orangePoppins.copyWith(
                                       fontSize: 14
                                   ),
